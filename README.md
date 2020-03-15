@@ -25,8 +25,9 @@ and allow it to run. Other systems may vary.
 lol
 
 ## To Do
-1.) Get post urls and navigate to them(w/o Selenium)
-  * Save higher-res & non-square version of post
-2.) Add support for carosuel galleries
-3.) Add support for video
-4.) Make code legible/ not-janky
+1. Get post urls and navigate to them(w/o Selenium)
+   + Save higher-res & non-square version of post
+  
+2. Add support for carosuel galleries
+3. Add support for video
+4. Make code legible/ not-janky
