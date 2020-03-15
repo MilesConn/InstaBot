@@ -15,15 +15,16 @@ To get around this I used Selenium to dynamically load in and save all the post 
 You need the Selenium Chrome Webdriver for your system. Note for macOS the driver 
 needs to be verified. The easiest way to do this is to install it using `brew`
 ```
-    brew cask install chromedriver
-    chromedriver
+   > brew cask install chromedriver
+   > chromedriver
 ```
 You should get an error messages and then open `System Preferences/Security & Privacy`
 and allow it to run. Other systems may vary.
-##How to Use
+
+## How to Use
 lol
 
-##To Do
+## To Do
 1.) Get post urls and navigate to them(w/o Selenium)
   * Save higher-res & non-square version of post
 2.) Add support for carosuel galleries
