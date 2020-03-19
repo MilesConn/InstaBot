@@ -31,15 +31,18 @@ class InstaBot:
 
 
     ##Goes to saved page and scrolls down to the bottom 
+    def go_to_saved(self):
+        sleep(2)
+        self.driver.find_element_by_xpath("//a[contains(@href,'/{}')]".format("saved")).click()
+
     def scroll_down(self):
         sleep(2)
         self.links=[]
-        self.driver.find_element_by_xpath("//a[contains(@href,'/{}')]".format("saved")).click()
         last_height = self.driver.execute_script("return document.body.scrollHeight")
         saved_box = self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/div[3]/article")
         while True:
             self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            sleep(2)
+            sleep(3)
             images=saved_box.find_elements_by_xpath("//img")
             for i in images:
                 self.links.append(i.get_attribute('src'))
@@ -61,6 +64,7 @@ class InstaBot:
 if __name__ == "__main__":
     x = InstaBot(secrets.username, secrets.pw)
     x.get_account()
+    x.go_to_saved()
     x.scroll_down()
     x.save_links()
     print("done")
